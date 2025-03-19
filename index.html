@@ -41,34 +41,33 @@
             color: #d32f2f;
         }
         .menu-item {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
         }
         .menu-item h3 {
             margin: 0;
             color: #b71c1c;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .menu-item h3 .arrow {
+            margin-left: 10px;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+        .menu-item h3:hover .arrow {
+            color: #d32f2f;
+        }
+        .menu-item img {
+            max-width: 150px;
+            border-radius: 8px;
+            margin-left: 20px;
+            display: none; /* Ocultar inicialmente */
         }
         .menu-item p {
             margin: 5px 0;
-        }
-        .menu-item img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-        .hidden {
-            display: none;
-        }
-        .show-more {
-            background-color: #d32f2f;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .show-more:hover {
-            background-color: #b71c1c;
         }
         footer {
             background-color: #d32f2f;
@@ -98,143 +97,68 @@
         <h2>Platos Tradicionales</h2>
         
         <div class="menu-item">
-            <h3>Pierogi</h3>
+            <h3 onclick="toggleImage('pierogi-img')">Pierogi <span class="arrow">></span></h3>
+            <img id="pierogi-img" src="https://via.placeholder.com/150" alt="Pierogi">
             <p>Empanadillas rellenas de queso, carne, papas o chucrut. Servidas con crema agria y cebolla frita.</p>
-            <img src="https://www.everyday-delicious.com/wp-content/uploads/2018/11/sauerkraut-mushroom-pierogi-everyday-delicious-FI.jpg" style="width: 300px; height: 500px;" alt="Pierogi">
-            <button class="show-more" onclick="toggleInfo('pierogi-info')">Más información</button>
-            <div id="pierogi-info" class="hidden">
-                <p>Los pierogi son uno de los platos más icónicos de Polonia. Se pueden servir hervidos o fritos.</p>
-            </div>
         </div>
 
         <div class="menu-item">
-            <h3>Bigos</h3>
+            <h3 onclick="toggleImage('bigos-img')">Bigos <span class="arrow">></span></h3>
+            <img id="bigos-img" src="https://via.placeholder.com/150" alt="Bigos">
             <p>Estofado de col agria, carne y salchichas, conocido como el "plato nacional de Polonia".</p>
-            <img src="https://images.arla.com/recordid/DB9FA32E-36DC-49D4-88FD8608E67165DB/bigos.jpg?format=jpg&width=1200&height=630&mode=crop" style="width: 550px; height: 300px;" alt="Bigos">
-            <button class="show-more" onclick="toggleInfo('bigos-info')">Más información</button>
-            <div id="bigos-info" class="hidden">
-                <p>El bigos es un plato que mejora con el tiempo, por lo que a menudo se prepara con anticipación.</p>
-            </div>
         </div>
 
         <div class="menu-item">
-            <h3>Żurek</h3>
+            <h3 onclick="toggleImage('zurek-img')">Żurek <span class="arrow">></span></h3>
+            <img id="zurek-img" src="https://via.placeholder.com/150" alt="Żurek">
             <p>Sopa de centeno agrio con salchicha, huevo duro y patatas.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Żurek">
-            <button class="show-more" onclick="toggleInfo('zurek-info')">Más información</button>
-            <div id="zurek-info" class="hidden">
-                <p>El żurek es una sopa tradicional que se sirve a menudo durante la Pascua.</p>
-            </div>
         </div>
-
-        <div class="menu-item">
-            <h3>Gołąbki</h3>
-            <p>Rollos de col rellenos de carne y arroz, bañados en salsa de tomate.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Gołąbki">
-            <button class="show-more" onclick="toggleInfo('gołąbki-info')">Más información</button>
-            <div id="gołąbki-info" class="hidden">
-                <p>Los gołąbki pueden encontrarse en mesas festivas, especialmente en reuniones familiares durante la Navidad o la Pascua. debido a que es un plato abundante y lleno de sabor, es una excelente opción cuando se busca una comida reconfortante, sobre todo en días fríos.</p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <h3>Krokiety</h3>
-            <p>Crepes rellenos de carne, setas o col, empanizados y fritos.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Krokiety">
-            <button class="show-more" onclick="toggleInfo('krokiety-info')">Más información</button>
-            <div id="krokiety-info" class="hidden">
-                <p>Después de rellenar y enrollar las crepes, se empanizan en pan rallado y se fríen hasta que estén doradas y crujientes.</p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <h3>Golonka</h3>
-            <p>Codillo de cerdo cocido o asado, a menudo servido con mostaza y pan.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Golanka">
-            <button class="show-more" onclick="toggleInfo('golonka-info')">Más información</button>
-            <div id="golonka-info" class="hidden">
-                <p>El golonka tiene un sabor rico y profundo, con una carne tierna y jugosa que se separa fácilmente del hueso. La piel, cuando se asa, se vuelve crujiente y deliciosa.</p>
-            </div>
-        </div>
-        
     </section>
 
     <section id="bebidas">
         <h2>Bebidas</h2>
         
         <div class="menu-item">
-            <h3>Kompot</h3>
+            <h3 onclick="toggleImage('kompot-img')">Kompot <span class="arrow">></span></h3>
+            <img id="kompot-img" src="https://via.placeholder.com/150" alt="Kompot">
             <p>Bebida tradicional hecha de frutas cocidas, servida fría.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Kompot">
         </div>
 
         <div class="menu-item">
-            <h3>Kvass</h3>
+            <h3 onclick="toggleImage('kvass-img')">Kvass <span class="arrow">></span></h3>
+            <img id="kvass-img" src="https://via.placeholder.com/150" alt="Kvass">
             <p>Bebida fermentada hecha de pan de centeno, con un sabor ligeramente ácido.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Kvass">
         </div>
-
-        <div class="menu-item">
-            <h3>Sok</h3>
-            <p>Jugo de frutas, especialmente de manzana (sok jabłkowy) y grosella negra (sok z czarnej porzeczki)</p>
-            <img src="https://via.placeholder.com/600x400" alt="Kvass">
-        </div>
-
-        <div class="menu-item">
-            <h3>Herbata</h3>
-            <p>Té, especialmente té negro, es una bebida muy común en Polonia.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Kvass">
-        </div>
-        
-        <div class="menu-item">
-            <h3>Zakwas buraczany</h3>
-            <p> Jugo de remolacha fermentada, conocido por sus beneficios para la salud.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Kvass">
-        </div>
-        
     </section>
 
     <section id="tragos">
         <h2>Tragos</h2>
         
         <div class="menu-item">
-            <h3>Vodka Polaco</h3>
+            <h3 onclick="toggleImage('vodka-img')">Vodka Polaco <span class="arrow">></span></h3>
+            <img id="vodka-img" src="https://via.placeholder.com/150" alt="Vodka Polaco">
             <p>El vodka es la bebida alcohólica más famosa de Polonia. Prueba nuestras variedades de vodka de hierbas y frutas.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Vodka Polaco">
         </div>
 
         <div class="menu-item">
-            <h3>Mead (Miód Pitny)</h3>
+            <h3 onclick="toggleImage('mead-img')">Mead (Miód Pitny) <span class="arrow">></span></h3>
+            <img id="mead-img" src="https://via.placeholder.com/150" alt="Mead">
             <p>Bebida alcohólica hecha de miel fermentada, conocida como "hidromiel".</p>
-            <img src="https://via.placeholder.com/600x400" alt="Mead">
         </div>
-
-        <div class="menu-item">
-            <h3>Nalewka</h3>
-            <p>Bebida alcoholica que contiene un 40% de alcohol, se produce con la maceracion del vodka. Sus ingredientes son frutas, hierbas, especias y azucar</p>
-            <img src="https://via.placeholder.com/600x400" alt="Nalewka">
-        </div>
-
-        <div class="menu-item">
-            <h3>Krupnik</h3>
-            <p>Vodka a base de miel y hierbas.</p>
-            <img src="https://via.placeholder.com/600x400" alt="Krupnik">
-        </div>
-        
     </section>
 
     <footer>
-        <p>&copy; 2025 Casa de Comida Polaca - Todos los derechos reservados</p>
+        <p>&copy; 2023 Casa de Comida Polaca - Todos los derechos reservados</p>
     </footer>
 
     <script>
-        // Función para mostrar/ocultar información adicional
-        function toggleInfo(id) {
-            const element = document.getElementById(id);
-            if (element.classList.contains('hidden')) {
-                element.classList.remove('hidden');
+        // Función para mostrar/ocultar imágenes
+        function toggleImage(id) {
+            const image = document.getElementById(id);
+            if (image.style.display === "none" || image.style.display === "") {
+                image.style.display = "block";
             } else {
-                element.classList.add('hidden');
+                image.style.display = "none";
             }
         }
     </script>
