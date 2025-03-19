@@ -91,6 +91,7 @@
         <a href="#platos">Platos Tradicionales</a>
         <a href="#bebidas">Bebidas</a>
         <a href="#tragos">Tragos</a>
+        <a href="#postres">Postres</a>
     </nav>
 
     <section id="platos">
@@ -113,55 +114,14 @@
             <img id="zurek-img" src="https://via.placeholder.com/150" alt="Żurek">
             <p>Sopa de centeno agrio con salchicha, huevo duro y patatas.</p>
         </div>
-    </section>
 
-    <section id="bebidas">
-        <h2>Bebidas</h2>
-        
         <div class="menu-item">
-            <h3 onclick="toggleImage('kompot-img')">Kompot <span class="arrow">></span></h3>
-            <img id="kompot-img" src="https://via.placeholder.com/150" alt="Kompot">
-            <p>Bebida tradicional hecha de frutas cocidas, servida fría.</p>
+            <h3 onclick="toggleImage('golabki-img')">Gołąbki <span class="arrow">></span></h3>
+            <img id="golabki-img" src="https://via.placeholder.com/150" alt="Gołąbki">
+            <p>Rollitos de col rellenos de carne y arroz, bañados en salsa de tomate.</p>
         </div>
 
         <div class="menu-item">
-            <h3 onclick="toggleImage('kvass-img')">Kvass <span class="arrow">></span></h3>
-            <img id="kvass-img" src="https://via.placeholder.com/150" alt="Kvass">
-            <p>Bebida fermentada hecha de pan de centeno, con un sabor ligeramente ácido.</p>
-        </div>
-    </section>
-
-    <section id="tragos">
-        <h2>Tragos</h2>
-        
-        <div class="menu-item">
-            <h3 onclick="toggleImage('vodka-img')">Vodka Polaco <span class="arrow">></span></h3>
-            <img id="vodka-img" src="https://via.placeholder.com/150" alt="Vodka Polaco">
-            <p>El vodka es la bebida alcohólica más famosa de Polonia. Prueba nuestras variedades de vodka de hierbas y frutas.</p>
-        </div>
-
-        <div class="menu-item">
-            <h3 onclick="toggleImage('mead-img')">Mead (Miód Pitny) <span class="arrow">></span></h3>
-            <img id="mead-img" src="https://via.placeholder.com/150" alt="Mead">
-            <p>Bebida alcohólica hecha de miel fermentada, conocida como "hidromiel".</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Casa de Comida Polaca - Todos los derechos reservados</p>
-    </footer>
-
-    <script>
-        // Función para mostrar/ocultar imágenes
-        function toggleImage(id) {
-            const image = document.getElementById(id);
-            if (image.style.display === "none" || image.style.display === "") {
-                image.style.display = "block";
-            } else {
-                image.style.display = "none";
-            }
-        }
-    </script>
-
-</body>
-</html>
+            <h3 onclick="toggleImage('kotlet-img')">Kotlet Schabowy <span class="arrow">></span></h3>
+            <img id="kotlet-img" src="https://via.placeholder.com/150" alt="Kotlet Schabowy">
+            <p>Chuleta de cerdo empanada, similar al "Wiener Schnitzel".</p
